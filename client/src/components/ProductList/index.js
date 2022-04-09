@@ -15,7 +15,6 @@ function ProductList() {
   const { currentCategory } = state;
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-
   useEffect(() => {
     // if there's data to be stored store it in the global state object
     if (data) {
@@ -23,7 +22,7 @@ function ProductList() {
         type: UPDATE_PRODUCTS,
         products: data.products
       });
-  
+      console.log(data);
       // take each product and save it to IndexedDB using the helper function 
       data.products.forEach((product) => {
         idbPromise('products', 'put', product);
@@ -45,6 +44,7 @@ function ProductList() {
   function filterProducts() {
     if (!currentCategory) {
       return state.products;
+      console.log(state.products);
     }
 
     return state.products.filter(
