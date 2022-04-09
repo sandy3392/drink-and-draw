@@ -33,13 +33,15 @@ const resolvers = {
         //       return user;
         // },
         user: async (parent, args, context) => {
+            // console.log(context.user._id);
             if (context.user) {
+    
               const user = await User.findById(context.user._id).populate({
                 path: 'orders.products',
                 populate: 'category'
               });
-      
-              user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+            //console.log(user);
+              //user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
       
               return user;
             }
@@ -54,8 +56,7 @@ const resolvers = {
               });
       
               return user.orders.id(_id);
-            }
-      
+            }     
             throw new AuthenticationError('Not logged in');
           },
     },
@@ -67,6 +68,7 @@ const resolvers = {
       
             return { token, user };
         },
+
         updateUser: async (parent, args, context) => {
             if (context.user) {
               return await User.findByIdAndUpdate(context.user._id, args, { new: true });
@@ -74,6 +76,22 @@ const resolvers = {
       
             throw new AuthenticationError('Not logged in');
           },
+
+        addOrder: async (parent, { products }, context) => {
+            console.log(products);
+            if (context.user) {
+              let order = await Order.create({ products });
+      
+              await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } }, { new: true });
+            
+              order = await order.populate('products').execPopulate();
+
+              return order;
+            }
+      
+            throw new AuthenticationError('Not logged in');
+        },
+
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
       
