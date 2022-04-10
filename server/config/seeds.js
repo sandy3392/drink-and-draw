@@ -8,7 +8,6 @@ db.once('open', async () => {
       { name: 'Wine' },
       { name: 'Beer' },
       { name: 'Bourbon' },
-      { name: 'Tequila' }
     ]);
   
     console.log('categories seeded');
@@ -20,7 +19,7 @@ db.once('open', async () => {
         name: 'Date Night',
         description:
           'Date night for two made easy in three steps: 1. Choose your wine. 2. Choose your art style: drawing or painting supplies for 2 creations, instructions included. 3. Pick the night for your date!',
-        image: 'Date-Night.JPG',
+        image: 'Date-Night.jpg',
         category: categories[0]._id,
         price: 40.00,
         quantity: 50
@@ -29,7 +28,7 @@ db.once('open', async () => {
         name: "Girls' Night",
         description:
           "The perfect Girls' night! Choose 2 bottles of wine. Comes with canvas and painting supplies for 4. Instructions included.",
-        image: 'Cheers.JPG',
+        image: 'Girls-Night.jpg',
         category: categories[0]._id,
         price: 60.00,
         quantity: 50
@@ -38,9 +37,18 @@ db.once('open', async () => {
         name: 'Group Party',
         category: categories[0]._id,
         description:
-          'Entertainment for a group made easy! Choose 2 bottles of wine. Comes with canvas and painting supplies for 4. Instructions included.',
-        image: 'soap.jpg',
+          'Entertainment for a group made easy! Choose 2 bottles of wine. Comes with canvas and painting supplies for 4 people. Instructions included.',
+        image: 'Cheers.jpg',
         price: 60.00,
+        quantity: 50
+      },
+      {
+        name: 'Large Party',
+        category: categories[0]._id,
+        description:
+          'Entertainment for a group made easy! Choose 4 bottles of wine. Comes with canvas and painting supplies for 8 people. Instructions included.',
+        image: 'Cheers-White-Wine.jpg',
+        price: 100.00,
         quantity: 50
       }
     ]);
