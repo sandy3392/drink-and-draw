@@ -43,8 +43,9 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
-          -Shop-Shop
+          <span role="img" aria-label="artist">🎨</span>
+          Drink and Draw
+          <span role="img" aria-label="wine">🍷</span>
         </Link>
       </h1>
 

@@ -1,10 +1,10 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary: #ab0c44;
+  --secondary: #90EE90;
+  --tertiary: #4B0082;
   --light: #fafafa;
   --dark: #272f32;
-  --error: rgb(228, 46, 1);
+  --error: #FF0000;
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
 }
@@ -26,6 +26,9 @@ body {
   line-height: 1.5;
   font-size: 16px;
   color: var(--dark);
+  background-color: #FAF0E6;
+
+  ;
 }
 
 h1,
@@ -34,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Merriweather', serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -46,6 +49,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  color:#4B0082;
 }
 
 h3 {
@@ -100,7 +104,7 @@ button {
 }
 
 button:hover {
-  opacity: .8;
+  opacity: .4;
 }
 
 button[disabled] {
