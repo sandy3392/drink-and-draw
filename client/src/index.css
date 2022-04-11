@@ -44,11 +44,11 @@ h6 {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 3.50rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color:#4B0082;
 }
 
@@ -92,6 +92,15 @@ header {
 header a, li{
   color: var(--light);
   list-style: none;
+}
+
+.navigation {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0rem;
 }
 
 button {
