@@ -19,7 +19,7 @@ db.once('open', async () => {
         name: 'Date Night',
         description:
           'Date night for two made easy in three steps: 1. Choose your wine. 2. Choose your art style: drawing or painting supplies for 2 creations, instructions included. 3. Pick the night for your date!',
-        image: 'Date-Night.jpg',
+        image: 'Girls-Night.jpg',
         category: categories[0]._id,
         price: 40.00,
         quantity: 50
