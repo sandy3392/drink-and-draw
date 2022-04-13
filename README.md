@@ -1,7 +1,7 @@
 # Drink And Draw
 
 ## Description:
-Drink And Draw is an Ecommerce website where you can order a package which incldes a drink and materials to paint a picture for yourself or for a group
+Drink And Draw is an Ecommerce website where you can order a package which includes a drink and materials to paint a picture for yourself or for a group
 
 ## Website URL: 
 https://infinite-ravine-21700.herokuapp.com/ 
