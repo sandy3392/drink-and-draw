@@ -16,7 +16,7 @@ MongoDB, Express , React, Node (MERN) , GraphQL, Appolo
 
 
 ## Contributors
-Sandeep Vittla, Jennifer Emanuele, EmilyPier , Chris Pierce
+Sandeep Vittla, Jennifer Emanuele,Emily Pierson, Chris Pierce
 
 
 ## License
